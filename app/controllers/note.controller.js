@@ -40,6 +40,7 @@ exports.findAll = (req, res) => {
 
 // Find a single note with a noteId
 exports.findOne = (req, res) => {
+    console.log(req.params.noteId)
     Note.findById(req.params.noteId)
     .then(note => {
         if(!note) {
